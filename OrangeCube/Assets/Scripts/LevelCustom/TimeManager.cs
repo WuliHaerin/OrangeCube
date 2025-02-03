@@ -71,7 +71,7 @@ namespace LevelCustom
                 if(!isCancelAd)
                 {
                     SetAdPanel(true);
-                    StartCoroutine(Die());
+                    StartCoroutine("Die");
                 }
                 else
                 {
@@ -113,6 +113,13 @@ namespace LevelCustom
         public IEnumerator Die()
         {
             yield return new WaitForSeconds(0.2f);
+//若是时间消耗完，则判定当前关卡失败
+                    //同时下方评分归零
+                    GlobalValue.gamestatus = GameStatus.failed;
+                    for (int temp = 0; temp < 3; temp++)
+                    {
+                        a_img_grade[temp].sprite = res_spr_bird_grey;
+                    }
         }
 
         public void Revive()
@@ -122,7 +129,7 @@ namespace LevelCustom
                 if (bol)
                 {
                     missionTime = 10;
-                    StopCoroutine(Die());
+                    StopCoroutine("Die");
                     SetAdPanel(false);
 
                     AdManager.clickid = "";

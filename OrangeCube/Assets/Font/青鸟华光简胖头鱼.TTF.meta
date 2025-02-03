@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8be3e983d5345fc49a42a56b14fbca44
+timeCreated: 1498022169
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: JPTY
+  fontNames:
+  - JPTY
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
